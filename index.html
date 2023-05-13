@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV to JSON Converter</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Convert CSV to JSON</h1>
+    <input type="file" id="csvFile" accept=".csv" />
+    <br/>
+    <br/>
+    <input type="text" id="exceptionKeys" placeholder="Enter exception keys, separated by comma" />
+    <button onclick="convertCsvToJson()">Convert</button>
+    <br/>
+    <br/>
+    <br/>
+    <textarea id="output" rows="10" cols="50"></textarea>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
